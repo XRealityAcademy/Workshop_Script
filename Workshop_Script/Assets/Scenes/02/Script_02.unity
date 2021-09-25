@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 27555823}
   - component: {fileID: 27555822}
   - component: {fileID: 27555824}
+  - component: {fileID: 27555825}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d006ff7d89542938ef11ecd2231302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 2594592308783687240, guid: 88e38208d0eff47a399141179d2fc12d, type: 3}
+  cubePrefab: {fileID: 4244733452306895697, guid: 33e1f3ca6f46d4945b22c81603749e67, type: 3}
 --- !u!4 &27555823
 Transform:
   m_ObjectHideFlags: 0
@@ -180,9 +181,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f70e4f266c345cabbfddaafc34d46b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallCubePrefab: {fileID: 2100490756079984660, guid: ba6a14b2615a24f5aa050962e80f08db, type: 3}
-  rateOfSpawn: 20
-  numberOfCubes: 100
+  smallCubePrefab: {fileID: 4244733452306895697, guid: 33e1f3ca6f46d4945b22c81603749e67, type: 3}
+  numberOfCubes: 200
+--- !u!114 &27555825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27555821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12bab41fcbf43ff80dcb6d1e3f3099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
 --- !u!1 &157992383
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,14 +7,14 @@ public class RandomSpawn : MonoBehaviour
 {
     public GameObject smallCubePrefab;
 
-    public float rateOfSpawn = 1f;
-    private float nextSpawn = 0;
+    //public float rateOfSpawn = 1f;
+   // private float nextSpawn = 0;
     public int numberOfCubes;
 
     //  IT is a list of game objects named cubesList;
     // <Inside this you mention what kind of data you want to add to the list>
     private List<GameObject> cubesList = new List<GameObject>();
-    //To accss data, it is same as an array and you access it via cubesList[i]
+    //To access data, it is same as an array and you access it via cubesList[i]
     
     // Update is called once per frame
     void Update()
@@ -25,18 +25,18 @@ public class RandomSpawn : MonoBehaviour
 
     public void GenerateCubes()
     {
-        // Create an empty list of cubes
+        
 
         // Spawn cube at random position within the big cube's transform position
         
         
         // Spawn small cube
         
-
+        //Start to spawn cubes all at one time
         for (int i = 0; i < numberOfCubes; i++)
         {
             Vector3 randPosition = new Vector3(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
-            GameObject smallCube = Instantiate(smallCubePrefab, randPosition, transform.rotation);
+            GameObject smallCube = Instantiate(smallCubePrefab, randPosition, Quaternion.identity);
             cubesList.Add(smallCube);
         }
         
@@ -48,12 +48,9 @@ public class RandomSpawn : MonoBehaviour
         
         // Add spawned cube to the list of cubes
 
-
-
-
     }
 
-    public object GameObject { get; set; }
+
 
     public  void DestroyCubes()
     { 
